@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="tcp">
+      <UniqueIdentifier>{6c874497-9503-48ae-82e1-9abeada9e4a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="udp">
+      <UniqueIdentifier>{fcf811f5-cd35-4898-b6f3-5c46e6293c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tcp\server">
+      <UniqueIdentifier>{b981e639-5dfe-46ac-8d50-b25762e97072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tcp\client">
+      <UniqueIdentifier>{27358f00-53b7-46da-9ce4-c5b383d0889a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lgqtnetwork_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtTcpBaseHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="udp\QtUdpHandler.cpp">
+      <Filter>udp</Filter>
+    </ClCompile>
+    <ClCompile Include="tcp\client\QtTcpClientHandler.cpp">
+      <Filter>tcp\client</Filter>
+    </ClCompile>
+    <ClCompile Include="tcp\server\QtTCPServerHandler.cpp">
+      <Filter>tcp\server</Filter>
+    </ClCompile>
+    <ClCompile Include="QtTcpBaseHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="udp\QtUdpHandler.h">
+      <Filter>udp</Filter>
+    </QtMoc>
+    <QtMoc Include="tcp\client\QtTcpClientHandler.h">
+      <Filter>tcp\client</Filter>
+    </QtMoc>
+    <QtMoc Include="tcp\server\QtTCPServerHandler.h">
+      <Filter>tcp\server</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>
