@@ -1,10 +1,10 @@
 /*!
  * \file QtUdpHandler.h
  *
- * \author daiweiheng
- * \date ËÄÔÂ 2021
+ * \author Leventure
+ * \date å››æœˆ 2022
  *
- * ÓÃÓÚÖ§³ÖQTÏÂµÄUDP´«Êä£¬Ê¹ÓÃ´ËÀàÇ°ĞèÒªÔÚÏîÄ¿ÊôĞÔÖĞÌí¼ÓnetworkÄ£¿éÖ§³Ö
+ * ç”¨äºæ”¯æŒQTä¸‹çš„UDPä¼ è¾“ï¼Œä½¿ç”¨æ­¤ç±»å‰éœ€è¦åœ¨é¡¹ç›®å±æ€§ä¸­æ·»åŠ networkæ¨¡å—æ”¯æŒ
  */
 #pragma once
 #include "../lgqtnetwork_global.h"
@@ -25,7 +25,7 @@ public:
 	// FullName:  QtUdpHandler::JoinGroup
 	// Access:    public 
 	// Returns:   void
-	// Qualifier: ¼ÓÈë×é²¥×é£¬½ÓÊÜ¸Ã×é²¥µØÖ·¶Ë¿ÚµÄÏûÏ¢
+	// Qualifier: åŠ å…¥ç»„æ’­ç»„ï¼Œæ¥å—è¯¥ç»„æ’­åœ°å€ç«¯å£çš„æ¶ˆæ¯
 	// Parameter: const QString & qsGroupAddr
 	// Parameter: qint16 port
 	//************************************
@@ -37,10 +37,10 @@ public:
 	// FullName:  QtUdpHandler::SendUdp
 	// Access:    public 
 	// Returns:   void
-	// Qualifier: ·¢ËÍUDPÏûÏ¢
-	// Parameter: const QString & qsMsg		-- ÏûÏ¢ÄÚÈİ
-	// Parameter: const QString qsSendTo	-- ·¢ËÍÄ¿±ê¶Ë¿Ú£¬Ä¬ÈÏÊÇÒÑ¼ÓÈëµÄ×é²¥×éµØÖ·
-	// Parameter: quint16 port				-- ·¢ËÍÄ¿±ê¶Ë¿Ú£¬Ä¬ÈÏÊÇÒÑ°ó¶¨µÄ×é²¥×é¶Ë¿Ú
+	// Qualifier: å‘é€UDPæ¶ˆæ¯
+	// Parameter: const QString & qsMsg		-- æ¶ˆæ¯å†…å®¹
+	// Parameter: const QString qsSendTo	-- å‘é€ç›®æ ‡ç«¯å£ï¼Œé»˜è®¤æ˜¯å·²åŠ å…¥çš„ç»„æ’­ç»„åœ°å€
+	// Parameter: quint16 port				-- å‘é€ç›®æ ‡ç«¯å£ï¼Œé»˜è®¤æ˜¯å·²ç»‘å®šçš„ç»„æ’­ç»„ç«¯å£
 	//************************************
 	void SendUdp(const QByteArray &bytes, const QString& qsSendTo = "", quint16 port = 0);
 
