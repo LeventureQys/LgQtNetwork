@@ -1,10 +1,10 @@
 /*!
  * \file QtTCPServerHandler.h
  *
- * \author daiweiheng
- * \date ËÄÔÂ 2021
+ * \author Leventure
+ * \date å››æœˆ 2022
  *
- * ÓÃÓÚÖ§³ÖQTÏÂµÄTCP·şÎñ¶ËÓ¦ÓÃ£¬Ê¹ÓÃ´ËÀàÇ°ĞèÒªÔÚÏîÄ¿ÊôĞÔÖĞÌí¼ÓnetworkÄ£¿éÖ§³Ö
+ * ç”¨äºæ”¯æŒQTä¸‹çš„TCPæœåŠ¡ç«¯åº”ç”¨ï¼Œä½¿ç”¨æ­¤ç±»å‰éœ€è¦åœ¨é¡¹ç›®å±æ€§ä¸­æ·»åŠ networkæ¨¡å—æ”¯æŒ
  */
 #pragma once
 #include "../../lgqtnetwork_global.h"
@@ -18,7 +18,7 @@
 struct ClnInfo
 {
 	qint64 nRecvedMsgLen = 0;
-	QString qsAddr;	// µØÖ·ÓĞÊ±»ñÈ¡²»µ½£¬Òò´Ë¿ªÒ»¸öÖµÀ´¼ÇÂ¼
+	QString qsAddr;	// åœ°å€æœ‰æ—¶è·å–ä¸åˆ°ï¼Œå› æ­¤å¼€ä¸€ä¸ªå€¼æ¥è®°å½•
 	QTcpSocket *pTcpSocket = Q_NULLPTR;
 };
 
@@ -39,10 +39,10 @@ public:
 
 	void CloseAllConn();
 
-	// ·¢ËÍÏûÏ¢
-	// bytes£ºÏûÏ¢ÄÚÈİ
-	// clnAddr£ºÄ¿±êµØÖ·£¬Èç¹û´«¿Õ£¬Ôò¶ÔËùÓĞÁ¬½ÓµÄ¿Í»§¶Ë·¢ËÍ
-	// clnPort£ºÄ¿±êÊ¹ÓÃµÄ¶Ë¿Ú£¬Èç¹û´«0£¬ÔòÏòËùÓĞ·ûºÏµØÖ·ÖµµÄ¿Í»§¶Ë½øĞĞ·¢ËÍ
+	// å‘é€æ¶ˆæ¯
+	// bytesï¼šæ¶ˆæ¯å†…å®¹
+	// clnAddrï¼šç›®æ ‡åœ°å€ï¼Œå¦‚æœä¼ ç©ºï¼Œåˆ™å¯¹æ‰€æœ‰è¿æ¥çš„å®¢æˆ·ç«¯å‘é€
+	// clnPortï¼šç›®æ ‡ä½¿ç”¨çš„ç«¯å£ï¼Œå¦‚æœä¼ 0ï¼Œåˆ™å‘æ‰€æœ‰ç¬¦åˆåœ°å€å€¼çš„å®¢æˆ·ç«¯è¿›è¡Œå‘é€
 	void SendMsg(const QByteArray &bytes, QString clnAddr = "", quint16 clnPort = 0);
 
 Q_SIGNALS:
@@ -58,7 +58,7 @@ private slots:
 
 private:
 	QObject *m_pParent = Q_NULLPTR;
-	QTcpServer* m_pTcpServer = Q_NULLPTR;	// ¸ù¾İ¶Ë¿ÚÖµÓ³ÉäµÄ·şÎñ¶ËsocketĞÅÏ¢
-	QHash<quint16, ClnInfo*> m_qhsSocketCln;		// ´ÓQTcpSocketÊµÀıµØÖ·Ó³Éäµ½µÄsocketĞÅÏ¢
+	QTcpServer* m_pTcpServer = Q_NULLPTR;	// æ ¹æ®ç«¯å£å€¼æ˜ å°„çš„æœåŠ¡ç«¯socketä¿¡æ¯
+	QHash<quint16, ClnInfo*> m_qhsSocketCln;		// ä»QTcpSocketå®ä¾‹åœ°å€æ˜ å°„åˆ°çš„socketä¿¡æ¯
 	QMutex m_qmtForqhsSocketCln;
 };
