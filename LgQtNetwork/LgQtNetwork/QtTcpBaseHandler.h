@@ -1,10 +1,10 @@
 /*!
  * \file QtTcpBaseHandler.h
  *
- * \author daiweiheng
- * \date 四月 2021
+ * \author Leventure
+ * \date 鍥涙湀 2022
  *
- * 用于支持QT下的TCP公共处理，使用此类前需要在项目属性中添加network模块支持
+ * 鐢ㄤ簬鏀寔QT涓嬬殑TCP鍏叡澶勭悊锛屼娇鐢ㄦ绫诲墠闇�瑕佸湪椤圭洰灞炴�т腑娣诲姞network妯″潡鏀寔
  */
 #pragma once
 #include <functional>
